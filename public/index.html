@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/72fb91e857.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/styles/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <header class="main-header">
+            <h1>SoundShare</h1>
+            <button type="button" title="configuracion">
+                <i class="fa-solid fa-gear fa-xl"></i>
+            </button>
+        </header>
+
+        <form action="" class="server-form">
+            <div class="input-main-container">
+                <div class="input-container">
+                    <label for="serverAddress">Server Address</label>
+                    <input type="text" title="server address">
+                </div>    
+                <div class="input-container">
+                    <label for="authentication">Authentication</label>
+                    <input type="text" title="server password">
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="button" title="connect">
+                    Connect
+                </button>
+                <button type="button" title="disconnect">
+                    Disconnect
+                </button>
+            </div>
+        </form>
+
+        <div class="status-info__wrapper">
+            <span>Current Status</span>
+            <div class="status-items__container">
+                <!--if connected/disconnected-->
+                <div class="status">
+                    <span>Status</span>
+                    <p id="status">Disconnected</p>
+                </div>
+                <div class="audio-source">
+                    <span>Audio Source</span>
+                    <p id="audioSource">
+                    Audio is streamer through your device's speakers and microphone</p>
+                </div>
+                <div class="channels">
+                    <span>Channels</span>
+                    <p id="channels">Stereo</p>
+                </div>
+                <div class="latency">
+                    <span>Latency</span>
+                    <p id="latency">No letency adjustments are applied</p>
+                </div>
+                <div class="quality">
+                    <span>Quality</span>
+                    <p id="quality">Standar settings are used</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <a href="#home" title="home"><i class="fa-solid fa-house fa-2xl"></i></a>
+            <a href="#connect" title="connect"><i class="fa-solid fa-plug fa-2xl"></i></a>
+            <a href="#settings" title="settings"><i class="fa-solid fa-gear fa-2xl"></i></a>
+        </footer>
+
+    </div>
+
+</body>
+</html>

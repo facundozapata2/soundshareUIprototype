@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --letter-space-m: .115rem;
+    /* colors */
+  --french-blue: #7183CB;
+  --charcoal-grey: #3D403F;
+  --almost-black: #1F2124;
+  --almost-black-2: #191B1D;
+  --midnight: #141D37;
+  --dark: #181D27;
+  --almost-black-3: #1C1D21;
+  --dark-grey: #23242A;
+  --navy: #101C4B;
+  --dusk: #252D4D;
+  --dark-2: #3C3F49;
+  --charcoal-grey-2: #3D4048;
+  --charcoal-grey-3: #585A5E; /* Nota: Corregí el valor original que tenía "ASE" en lugar de "5E" */
+  --steel: #727687;
+  --cornflower-blue: #617BEF;
+  --cornflower: #607AFB;
+  --cool-grey: #A0A2AE;
+  --pale-grey: #E8EAED;
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+html{
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--pale-grey);
+}
+
+body{
+    background: var(--steel);
+    width: 100%;
+    height: clamp(100%, 100dvh, 100vh);
+    min-height: 100vh;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+button{
+    cursor: pointer;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    gap: 1rem;
+    width: clamp(320px, 100%, 786px);
+    height: clamp(100%, 100dvh, 100vh);
+    background: var(--white);
+    box-shadow: 0 0 12px 0 var(--shadow-black);
+    background: var(--almost-black);
+    padding: 1rem;
+    /* footer height */
+    padding-bottom: calc(390px / 6);
+}
+
+@media screen and (min-width: 786px){
+    .wrapper{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    }
+
+    .main-header{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    
+    .server-form{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    
+    .status-info__wrapper{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem; */
+    width: 100%;
+}
+
+.main-header h1{
+    font-size: 1.2rem;
+}
+
+.main-header button{
+    background: transparent;
+
+}
+
+.main-header i{
+    color: var(--pale-grey);
+}
+
+.server-form{
+    width: 100%;
+    display: grid;
+    place-content: center;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 2fr 1fr;
+    gap: 1rem;
+}
+
+.input-main-container{
+    width: 100%;
+    margin: auto;
+}
+
+.input-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    padding: .5rem 0;
+}
+
+.input-container label{
+    margin-right: auto;
+}
+
+.input-container input{
+    all: unset;
+    width: 100%;
+    background: var(--charcoal-grey-2);
+    padding: .25rem 0;
+    border-radius: 1rem;
+}
+
+.button-container{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.button-container button{
+    letter-spacing: var(--letter-space-m);
+    width: 100%;
+    font-weight: 700;
+    padding: .75rem;
+    border-radius: 1rem;
+    color: var(--pale-grey);
+}
+
+.button-container button:first-child{
+    background: var(--cornflower-blue);
+}
+
+.button-container button:last-child{
+    background: var(--dark-2);
+}
+
+
+.status-info__wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    gap: 1rem;
+    /* padding: 1rem; */
+}
+
+.status-items__container{
+    display: grid;
+    gap: 1rem;
+}
+
+.status-items__container span{
+    font-weight: 700;
+    letter-spacing: var(--letter-space-m);
+}
+
+.main-footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    padding: 1rem;
+    background: var(--dark-grey);
+    border-top: 1px solid var(--charcoal-grey-3);
+}
+
+
+/* *{
+    outline: 1px solid red;
+} */
