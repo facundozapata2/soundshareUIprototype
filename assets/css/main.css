@@ -168,3 +168,59 @@
 
 /* setting.html styles */
 
+.user-guide{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.user-guide-settings__card{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    place-items: center;
+    gap: .5rem;
+}
+
+.user-guide-settings__card > i{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: var(--charcoal-grey-2);
+    padding: 1.5rem 1rem;
+    border-radius: .5rem;
+}
+
+.user-guide-settings__card > div{
+    align-self: left;
+    margin-right: auto;
+}
+
+.user-name-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 1rem;
+}
+
+.user-name-container__form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.user-name-container__form input{
+    background: var(--dusk);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--steel);
+}
+
+
+
+*{
+    /* outline: 1px solid red !important; */
+}
