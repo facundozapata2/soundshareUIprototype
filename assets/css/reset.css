@@ -1,0 +1,68 @@
+:root {
+    --letter-space-m: .115rem;
+    /* colors */
+  --french-blue: #7183CB;
+  --charcoal-grey: #3D403F;
+  --almost-black: #1F2124;
+  --almost-black-2: #191B1D;
+  --midnight: #141D37;
+  --dark: #181D27;
+  --almost-black-3: #1C1D21;
+  --dark-grey: #23242A;
+  --navy: #101C4B;
+  --dusk: #252D4D;
+  --dark-2: #3C3F49;
+  --charcoal-grey-2: #3D4048;
+  --charcoal-grey-3: #585A5E; /* Nota: Corregí el valor original que tenía "ASE" en lugar de "5E" */
+  --steel: #727687;
+  --cornflower-blue: #617BEF;
+  --cornflower: #607AFB;
+  --cool-grey: #A0A2AE;
+  --pale-grey: #E8EAED;
+}
+
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+html{
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--pale-grey);
+}
+
+body{
+    background: var(--steel);
+    width: 100%;
+    height: clamp(100%, 100dvh, 100vh);
+    min-height: 100vh;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+button{
+    cursor: pointer;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    gap: 1rem;
+    width: clamp(320px, 100%, 786px);
+    height: clamp(100%, 100dvh, 100vh);
+    /* background: var(--white); */
+    box-shadow: 0 0 12px 0 var(--shadow-black);
+    background: var(--almost-black);
+    padding: 1rem;
+    /* footer height */
+    padding-bottom: calc(390px / 6);
+}

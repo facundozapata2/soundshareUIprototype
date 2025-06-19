@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/72fb91e857.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/settings.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <title>Settings</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <header class="main-header">
+            <a href="#back" title="back">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h1>Settings</h1>
+            <a href="#options" title="options">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </a>
+        </header>
+
+        <div class="user-guide">
+            <h2>Getting Started</h2>
+            <div class="user-manual">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <div class="user-manual__txt">
+                    <span>User's Guide</span>
+                    <p>How to install soundShare</p>
+                </div>
+                <a href="#userManual" title="user guide">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="user-name-container">
+            <span>Communication</span>
+            <div class="user-name-container__form">
+                <label for="userName" aria-label="User Name" title="User Name">Your name</label>
+                <input type="text" title="User Name" placeholder="Put your name...">
+            </div>
+        </div>
+
+        <div class="audio-settings__setting">
+            <h2>Audio Settings</h2>
+            <div class="audio-settings-options__setting">
+                <div class="audio-buffer__container setting-option__card">
+                    <i class="fa-brands fa-buffer"></i>
+                    <div class="audio-buffer__txt">
+                        <span>Audio buffer size</span>
+                        <p>Larger = smoother audio, smaller = lower latency</p>
+                    </div>
+                    <input type="checkbox" title="#">
+                </div>
+                <div class="audio-compression__container setting-option__card">
+                    <i class="fa-solid fa-file-zipper"></i>
+                    <div class="audio-compression__txt">
+                        <span>Audio compression</span>
+                        <p>Reduce newwork usage</p>
+                    </div>
+                    <input type="checkbox" title="#">
+                </div>
+                <div class="compression-bitRate__container setting-option__card">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="compression-bitRate__txt">
+                        <span>Compression bit rate</span>
+                        <p>Opus audio compression bit rate</p>
+                        <input type="checkbox" title="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="connection__setting">
+            <h2>Connection</h2>
+            <div class="connection-settings__options">
+                <div class="connect-on-start__container setting-option__card">
+                    <i class="fa-solid fa-power-off"></i>
+                    <div class="connect-on-start__txt">
+                        <span>Connect on start</span>
+                        <p>Connect to server immediately on start</p>
+                    </div>
+                    <input type="checkbox" title="#">
+                </div>
+                <div class="auto-reconnect__container setting-option__card">
+                    <i class="fa-solid fa-power-off"></i>
+                    <div class="auto-reconnect__txt">
+                        <span>Auto reconnect</span>
+                        <p>Reconnect if server connection is lost</p>
+                    </div>
+                    <input type="checkbox" title="#">
+                </div>
+                <div class="auto-reconnect-on-settings setting-option__card">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <div class="auto-reconnect-on-settings__txt">
+                        <span>Auto reconnect on settings</span>
+                        <p>Reconnect if required on settings change</p>
+                    </div>
+                    <input type="checkbox" title="#">
+                </div>
+            </div>
+        </div>
+        
+        <div class="device__settings">
+            <h2>Device</h2>
+            <div class="device-settings__options">
+                <div class="android-native-audio setting-option__card">
+                    <i class="fa-solid fa-robot"></i>
+                    <div class="android-native-audio__txt">
+                        <span>Android native audio</span>
+                        <p>Select alternate audio path</p>
+                    </div>
+                    <!-- <input type="checkbox" title="#"> -->
+                </div>
+                <div class="disable-android-audio-path setting-option__card">
+                    <i class="fa-solid fa-power-off"></i>
+                    <div class="disable-android-audio-path__txt">
+                        <span>Disable fast Adnroid audio path</span>
+                        <p>May increase latency slightly</p>
+                    </div>
+                    <input type="checkbox" title="#">
+                </div>
+                <div class="wake-lock setting-option__card">
+                    <i class="fa-solid fa-power-off"></i>
+                    <!-- <i class="fa-solid fa-lock-open"></i> alternate with js -->
+                     <div class="wake-lock__txt">
+                        <span>Wake lock</span>
+                        <p>Keep device from sleeping</p>
+                     </div>
+                     <input type="checkbox" title="#">
+                </div>
+                <div class="screen-wake-lock setting-option__card">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <!-- <i class="fa-solid fa-display"></i> alternate with js if mobile or desktop -->
+                    <div class="screen-wake-lock__txt">
+                        <span>Screen on wake lock</span>
+                        <p>Keep the screen on during use</p>
+                    </div>
+                    <input type="checkbox" title="#">
+                </div>
+            </div>
+        </div>
+
+        <div class="advanced__settings">
+            <h2>Advanced</h2>
+            <div class="advanced-settings__options">
+                <div class="server-port-num setting-option__card">
+                    <i class="fa-solid fa-database"></i>
+                    <div class="server-port-num__txt">
+                        <span>Server port number</span>
+                        <p>Must match server port setting</p>
+                    </div>
+                    <!-- add input if user clicks it -->
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <a href="#home" title="home"><i class="fa-solid fa-house fa-2xl"></i></a>
+            <a href="#connect" title="connect"><i class="fa-solid fa-plug fa-2xl"></i></a>
+            <a href="./setting.html" title="settings"><i class="fa-solid fa-gear fa-2xl"></i></a>
+        </footer>
+
+    </div>
+
+</body>
+</html>
