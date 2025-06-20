@@ -213,10 +213,18 @@
 }
 
 .user-name-container__form input{
-    background: var(--dusk);
+    background: var(--dark);
     padding: 1rem;
     border-radius: 1rem;
     border: 1px solid var(--steel);
+}
+
+.audio-settings__setting{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+    
 }
 
 
