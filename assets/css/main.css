@@ -181,10 +181,11 @@
     grid-template-columns: auto 1fr auto;
     place-items: center;
     gap: .5rem;
+    padding: .25rem;
 }
 
-.user-guide-settings__card > i{
-    width: 100%;
+.option-icon-bg {
+    width: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,10 +207,20 @@
     gap: 1rem;
 }
 
+.user-name-container > span{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 .user-name-container__form{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+}
+
+.user-name-container__form label{
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .user-name-container__form input{
@@ -217,54 +228,50 @@
     padding: 1rem;
     border-radius: 1rem;
     border: 1px solid var(--steel);
+    font-size: 1rem;
 }
 
-.audio-settings__setting{
+.setting_list{
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
     gap: 1rem;
-}
-
-.audio-settings-options__setting{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 1rem;
-}
-
-.setting-option__no-checkbox{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    place-items: center;
-    gap: 1rem;
+    outline: 1px solid red;
 }
 
 .setting-option__card{
     display: grid;
-    grid-template-columns: auto 2fr auto;
+    grid-template-columns: auto 1fr auto;
     gap: 1rem;
+    padding: .5rem;
 }
 
-.setting-option__card p{
-    color: var(--steel);
-    font-weight: 700;
+.setting-option__card > input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    background: var(--almost-black);
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    border-radius: .5rem;
+    outline: .15rem solid var(--steel);
 }
 
-.setting-option__card > i{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    background: var(--dark-2);
-    padding: 1.5rem 1rem;
-    border-radius: .75rem;
+.setting-option__card > input[type="checkbox"]:checked {
+  background: var(--cornflower-blue);
+  outline-color: var(--cornflower-blue);
 }
 
-
-
-
-
-
-/* *{
-    outline: 1px solid red !important;
-} */
+.setting-option__card > input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: .2rem;
+  left: 0;
+  margin: auto;
+  width: .6rem;
+  height: 1.2rem;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
