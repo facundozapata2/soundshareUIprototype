@@ -25,7 +25,7 @@
     .wrapper{
     display: grid;
     place-content: center;
-    height: 100vh;
+    height: 100%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr;
     }
@@ -241,6 +241,7 @@
 .setting-option__card{
     display: grid;
     grid-template-columns: auto 1fr auto;
+    align-items: center;
     gap: 1rem;
     padding: .5rem;
 }
